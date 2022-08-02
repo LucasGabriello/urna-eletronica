@@ -24,23 +24,23 @@
 </style>
  
 </head>
-
+<form method="get" action="">
       <div class="row">
         <div class="col-sm-3">
           
         </div>
         <div class="col-sm-6">
-          	<div class="col-sm-7 well">
-            <form>
+          	<div class="col-sm-6 well">
+            
               <div class="form-group">
-                <input class="form-control input-lg " id="n1" type="text" value="" maxlength = 2>
+                <input class="form-control input-lg " id="n1" type="texte" value="" maxlength = 2 disabled>
                 <h2>Nome - SIGLA</h2>
                 <h3>Vice</h3>
               </div>
-            </form>
+            
             </div>
             
-            <div class="col-sm-5">
+            <div class="col-sm-6">
                 <table class="table">
                   <tr>
                     <th><button type="button" class="btn num" onclick="if (document.getElementById('n1').value.length<2){ document.getElementById('n1').value +='1' }">1</button></th>
@@ -65,11 +65,14 @@
                   <tr>
                     <th><button type="button" class="btn btn-default">Branco</button></th>
                     <th><button type="button" class="btn btn-danger" onclick="document.getElementById('n1').value='' ">Corrige</button></th>
-                    <th><button type="button" class="btn btn-success" id="teste">Confirma</button></th>
+                    <th><button type="submit" class="btn btn-success" id="teste">Confirma</button></th>
                   </tr>
                 </table> 
             </div>
         </div>
         <div class="col-sm-3">
+        
         </div>
       </div>
+      </form>
+     
