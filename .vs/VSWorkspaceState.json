@@ -2,9 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\urna-app",
+    "\\urna-app\\Controllers",
+    "\\urna-app\\Models",
     "\\urna-app\\Views",
     "\\urna-app\\Views\\Home"
   ],
-  "SelectedNode": "\\urna-app\\Views\\Home\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }
