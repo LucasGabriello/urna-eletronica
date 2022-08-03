@@ -3,4 +3,18 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<button type="submit" onclick="document.getElementById('n1').value">veja em quem votou agora!</button>
+<p id="a">oi</p>
+<script>
+      i =0
+        function ver() {
+            if(document.getElementById('n1').value == 13 ){i++
+              document.getElementById("a").innerHTML = "lula";
+            }
+            if(document.getElementById('n1').value == 17 ){i++
+              document.getElementById("a").innerHTML = "bolsonaro";
+            }
+            console.log(document.queryselector('name').value)
+        }
+        
+</script>

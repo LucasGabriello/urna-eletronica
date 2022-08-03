@@ -10,21 +10,25 @@
   <style>
     
     .num{background-color:black; 
-    color: white}
-    .num:hover{color: #f1f1f1}
-    .table {margin:0 auto;
-    border : none}
+        color: white}
+        .num:hover{color: #f1f1f1}
+        .table {margin:0 auto;
+        border : none}
 
     .n1{
-    height: 30px;
-    background-color:#fff;
-    border:1px;
+        height: 30px;
+        background-color:#fff;
+        border:1px;
     }
-
+    img{
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        padding: 10px;
+    }
 </style>
- 
 </head>
-<form method="get" action="">
+<form method="GET" action="./Home/Privacy">
       <div class="row">
         <div class="col-sm-3">
           
@@ -33,7 +37,8 @@
           	<div class="col-sm-6 well">
             
               <div class="form-group">
-                <input class="form-control input-lg " id="n1" type="texte" value="" maxlength = 2 disabled>
+              <img src="https://www.gov.br/planalto/pt-br/conheca-a-presidencia/acervo/simbolos-nacionais/brasao-da-republica/brasaooficialcolorido.png" >
+                <input class="form-control input-lg " id="n1" type="texte" value="" name="voto" maxlength = 2 >
                 <h2>Nome - SIGLA</h2>
                 <h3>Vice</h3>
               </div>
@@ -63,16 +68,26 @@
                     <th></th>
                   </tr>
                   <tr>
-                    <th><button type="button" class="btn btn-default">Branco</button></th>
+                    <th><button type="button" class="btn btn-default" onclick="">Branco</button></th>
                     <th><button type="button" class="btn btn-danger" onclick="document.getElementById('n1').value='' ">Corrige</button></th>
-                    <th><button type="submit" class="btn btn-success" id="teste">Confirma</button></th>
+                    <th><button type="submit" class="btn btn-success" id="teste" onclick="vota()">Confirma</button></th>
                   </tr>
                 </table> 
             </div>
         </div>
-        <div class="col-sm-3">
-        
+        <div class="col-sm-3" id="s">
+        Lula <label id="13"></label>
         </div>
       </div>
       </form>
+      <a href="./">aa</a>
+      <script>
+      i =0
+        function vota() {
+            if(document.getElementById('n1').value == 13 ){i++
+              document.getElementById("13").innerHTML = i;
+            }
+        }
+        
+      </script>
      
