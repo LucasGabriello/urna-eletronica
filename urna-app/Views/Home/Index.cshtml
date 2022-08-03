@@ -23,12 +23,12 @@
     img{
         margin-left: auto;
         margin-right: auto;
-        width: 50%;
+        width: 100%;
         padding: 10px;
     }
 </style>
 </head>
-<form method="GET" action="./Home/Privacy">
+<form >
       <div class="row">
         <div class="col-sm-3">
           
@@ -38,7 +38,7 @@
             
               <div class="form-group">
               <img src="https://www.gov.br/planalto/pt-br/conheca-a-presidencia/acervo/simbolos-nacionais/brasao-da-republica/brasaooficialcolorido.png" >
-                <input class="form-control input-lg " id="n1" type="texte" value="" name="voto" maxlength = 2 >
+                <input class="form-control input-lg " id="n1" type="text" value="" name="voto" maxlength = 2 >
                 <h2>Nome - SIGLA</h2>
                 <h3>Vice</h3>
               </div>
@@ -68,26 +68,39 @@
                     <th></th>
                   </tr>
                   <tr>
-                    <th><button type="button" class="btn btn-default" onclick="">Branco</button></th>
+                    <th><button type="button" class="btn btn-default" onclick="branco()">Branco</button></th>
                     <th><button type="button" class="btn btn-danger" onclick="document.getElementById('n1').value='' ">Corrige</button></th>
-                    <th><button type="submit" class="btn btn-success" id="teste" onclick="vota()">Confirma</button></th>
+                    <th><button type="button" class="btn btn-success" id="confirma" onclick="vota()">Confirma</button></th>
                   </tr>
                 </table> 
             </div>
         </div>
         <div class="col-sm-3" id="s">
         Lula <label id="13"></label>
+        <br/>
+        Bolsonaro <label id="17"></label>
+        <br/>
+        Branco <label id="branco"></label>
         </div>
       </div>
       </form>
-      <a href="./">aa</a>
       <script>
-      i =0
+
+      let lula = 0
+      let bolso = 0
+      let brancos = 0
         function vota() {
-            if(document.getElementById('n1').value == 13 ){i++
-              document.getElementById("13").innerHTML = i;
+            if(document.getElementById('n1').value == 13 ){lula++
+              document.getElementById("13").innerHTML = lula;
             }
+            if(document.getElementById('n1').value == 17 ){bolso++
+              document.getElementById("17").innerHTML = bolso;
+            }
+            document.getElementById('n1').value=''
         }
-        
+        function branco(){
+        brancos++
+        document.getElementById('branco').innerHTML = brancos;
+        }
       </script>
      
